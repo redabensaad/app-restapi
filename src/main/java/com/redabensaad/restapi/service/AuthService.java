@@ -1,0 +1,36 @@
+package com.redabensaad.restapi.service;
+
+import com.redabensaad.restapi.dto.AuthDTO;
+import com.redabensaad.restapi.dto.UserDTO;
+import lombok.RequiredArgsConstructor;
+import org.springframework.security.authentication.*;
+import org.springframework.stereotype.Service;
+
+@Service
+@RequiredArgsConstructor
+public class AuthService {
+
+    private final AuthenticationManager authenticationManager;
+    private final JwtService jwtService;
+    private final UserService userService;
+
+    public AuthDTO.LoginResponse login(AuthDTO.LoginRequest request) {
+
+        authenticationManager.authenticate(
+                new UsernamePasswordAuthenticationToken(
+                        request.email(),
+                        request.password()
+                )
+        );
+
+        String token = jwtService.generateToken(request.email());
+
+        return new AuthDTO.LoginResponse(token, request.email());
+    }
+
+    public AuthDTO.RegisterResponse register(UserDTO.CreateUserDTO request) {
+        UserDTO.GetUserDTO created = userService.createUser(request);
+
+        return new AuthDTO.RegisterResponse(created.id(), created.name(), created.email());
+    }
+}
