@@ -9,7 +9,7 @@
 RESTful API built with Spring Boot featuring JWT authentication, user management, role-based security, PostgreSQL persistence, and input validation.
 
 ## Key Features
- 
+
 * **JWT Authentication:** Secure, stateless authentication using JSON Web Tokens.
 * **User Management:** Complete CRUD operations for user resources.
 * **Role-Based Security:** Protected endpoints using Spring Security.
@@ -31,7 +31,7 @@ RESTful API built with Spring Boot featuring JWT authentication, user management
 * **Lombok**
 
 ## Getting Started
- 
+
 ### Prerequisites
 
 * **JDK 25+**
