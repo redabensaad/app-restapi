@@ -4,11 +4,11 @@
 ![Jackson](https://img.shields.io/badge/Jackson-JSON_Processing-black)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-336791)
 
-# RestAPI
+# RestAPI • Secure REST API (Spring Boot + PostgreSQL + JWT)
 
 RESTful API built with Spring Boot featuring JWT authentication, user management, role-based security, PostgreSQL persistence, and input validation.
 
-## Key Features
+## ✨ Key Features
 
 * **JWT Authentication:** Secure, stateless authentication using JSON Web Tokens.
 * **User Management:** Complete CRUD operations for user resources.
@@ -18,7 +18,7 @@ RESTful API built with Spring Boot featuring JWT authentication, user management
 * **Global Exception Handling:** Consistent API error responses and status codes.
 * **PostgreSQL Integration:** Data persistence with Spring Data JPA and Hibernate.
 
-## Technologies Used
+## 🛠️ Technologies Used
 
 * **Java 25**
 * **Spring Boot**
@@ -30,7 +30,7 @@ RESTful API built with Spring Boot featuring JWT authentication, user management
 * **Maven**
 * **Lombok**
 
-## Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 
@@ -79,7 +79,7 @@ API available at:
 http://localhost:8080
 ```
 
-## Authentication Endpoints
+## 🔐 Authentication Endpoints
 
 Base URL:
 
@@ -120,7 +120,7 @@ Base URL:
 }
 ```
 
-## User Endpoints
+## 👤 User Endpoints
 
 All endpoints require authentication:
 
@@ -154,7 +154,7 @@ All fields are optional:
 }
 ```
 
-## API Capabilities
+## 📌 API Capabilities
 
 * **Create, Read, Update, and Delete Users**
 * **JWT-Based Authentication**
@@ -165,7 +165,7 @@ All fields are optional:
 * **Custom Error Responses**
 * **Protected REST Endpoints**
 
-## Project Status
+## 📦 Project Status
 
 **Completed • Learning & Portfolio Project**
 
