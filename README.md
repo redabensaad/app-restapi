@@ -4,170 +4,92 @@
 ![Jackson](https://img.shields.io/badge/Jackson-JSON_Processing-black)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-336791)
 
-# RestAPI • Secure REST API (Spring Boot + PostgreSQL + JWT)
+# RestAPI
 
-RESTful API built with Spring Boot featuring JWT authentication, user management, role-based security, PostgreSQL persistence, and input validation.
+Secure REST API built with Spring Boot featuring JWT authentication, user management, role-based security and PostgreSQL persistence.
 
-## ✨ Key Features
+> \> [Live Preview](https://redabensaad.github.io/restapi)
 
-* **JWT Authentication:** Secure, stateless authentication using JSON Web Tokens.
-* **User Management:** Complete CRUD operations for user resources.
-* **Role-Based Security:** Protected endpoints using Spring Security.
-* **Input Validation:** Request validation powered by Jakarta Bean Validation.
-* **Password Encryption:** BCrypt hashing for secure password storage.
-* **Global Exception Handling:** Consistent API error responses and status codes.
-* **PostgreSQL Integration:** Data persistence with Spring Data JPA and Hibernate.
+---
 
-## 🛠️ Technologies Used
+$ Context
 
-* **Java 25**
-* **Spring Boot**
-* **Spring Security**
-* **JWT (jjwt)**
-* **Spring Data JPA**
-* **Hibernate**
-* **PostgreSQL**
-* **Maven**
-* **Lombok**
+RestAPI was developed as a learning and portfolio project focused on backend development fundamentals and secure API design.
 
-## 🚀 Getting Started
+The application demonstrates authentication, authorization, validation, persistence and RESTful communication through a modern Spring Boot architecture.
 
-### Prerequisites
+---
 
-* **JDK 25+**
-* **Maven 3.9+**
-* **PostgreSQL 16+**
+$ Domain
 
-### Clone Repository
+> \> User management<br>
+> \> Authentication workflows<br>
+> \> Authorization policies<br>
+> \> Secure REST services<br>
 
-```bash
-git clone git@github.com:redabensaad/restapi.git
-cd restapi
-```
+---
 
-### Create Database
+$ What Was Built
 
-```sql
-CREATE DATABASE restapi_db;
-```
+> \> User registration<br>
+> \> User authentication<br>
+> \> JWT token generation<br>
+> \> User CRUD operations<br>
+> \> Role-based endpoint protection<br>
+> \> Password encryption<br>
+> \> Request validation<br>
+> \> Global exception handling<br>
+> \> PostgreSQL persistence<br>
+> \> Stateless session management<br>
 
-### Configure Application
+---
 
-Create the `src/main/resources/application.properties` file:
+$ Technical Stack
 
-```properties
-spring.datasource.url=jdbc:postgresql://localhost:5432/restapi_db
-spring.datasource.username=your_username
-spring.datasource.password=your_password
+> \> Java 25<br>
+> \> Spring Boot 3.4<br>
+> \> Spring Security<br>
+> \> JWT (jjwt)<br>
+> \> Spring Data JPA<br>
+> \> Hibernate<br>
+> \> PostgreSQL 16<br>
+> \> Jackson<br>
+> \> Maven<br>
+> \> Lombok<br>
 
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
+---
 
-jwt.secret=your_secret_key_at_least_32_characters
-jwt.expiration=86400000
-```
+$ Architecture
 
-### Run Application
+The application follows a layered REST architecture separating authentication, business logic and persistence concerns.
 
-```bash
-mvn spring-boot:run
-```
+Security is implemented through JWT-based authentication while protected resources rely on Spring Security authorization mechanisms.
 
-API available at:
+Data persistence is handled through Spring Data JPA and PostgreSQL.
 
-```text
-http://localhost:8080
-```
+---
 
-## 🔐 Authentication Endpoints
+$ API Modules
 
-Base URL:
+> \> Authentication endpoints<br>
+> \> User management endpoints<br>
+> \> JWT security workflows<br>
+> \> Validation layer<br>
+> \> Exception handling layer<br>
 
-```text
-/api/auth
-```
+---
 
-| Method | Endpoint | Description |
-|----------|----------|-------------|
-| POST | `/register` | Register a new user |
-| POST | `/login` | Authenticate and receive a JWT token |
+$ Project Status
 
-### Register Request
+> \> Completed project<br>
+> \> Backend application<br>
+> \> Portfolio demonstration project<br>
+> \> Secure REST API implementation<br>
 
-```json
-{
-"name": "John Doe",
-"email": "john@example.com",
-"password": "secret123"
-}
-```
+---
 
-### Login Request
+$ Notes
 
-```json
-{
-"email": "john@example.com",
-"password": "secret123"
-}
-```
+This project showcases modern Spring Boot development practices including authentication, authorization, persistence, validation and API design.
 
-### Login Response
-
-```json
-{
-"token": "eyJ...",
-"email": "john@example.com"
-}
-```
-
-## 👤 User Endpoints
-
-All endpoints require authentication:
-
-```http
-Authorization: Bearer <token>
-```
-
-Base URL:
-
-```text
-/api/users
-```
-
-| Method | Endpoint | Description |
-|----------|----------|-------------|
-| GET | `/` | Retrieve all users |
-| GET | `/{id}` | Retrieve user by ID |
-| POST | `/` | Create a user |
-| PUT | `/{id}` | Partially update a user |
-| DELETE | `/{id}` | Delete a user |
-
-### Update Request
-
-All fields are optional:
-
-```json
-{
-"name": "Updated Name",
-"email": "updated@example.com",
-"password": "newpassword"
-}
-```
-
-## 📌 API Capabilities
-
-* **Create, Read, Update, and Delete Users**
-* **JWT-Based Authentication**
-* **Stateless Session Management**
-* **BCrypt Password Hashing**
-* **Request Validation**
-* **Global Exception Handling**
-* **Custom Error Responses**
-* **Protected REST Endpoints**
-
-## 📦 Project Status
-
-**Completed • Learning & Portfolio Project**
-
-This project demonstrates modern Spring Boot backend development practices, including authentication, security, persistence, validation, and REST API design.
-
+The live preview provides an interactive Angular simulator demonstrating authentication flows, protected endpoints and API usage scenarios.
