@@ -93,3 +93,15 @@ $ Notes
 This project showcases modern Spring Boot development practices including authentication, authorization, persistence, validation and API design.
 
 The live preview provides an interactive Angular simulator demonstrating authentication flows, protected endpoints and API usage scenarios.
+
+---
+
+$ Preview
+
+![RestAPI](shot/restapi.png)
+
+---
+
+$ Built
+
+✓ Oct 2023
